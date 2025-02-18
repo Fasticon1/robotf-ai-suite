@@ -45,46 +45,52 @@ make help
 ```bash
 Usage:
   make <target>
-
-Targets:
-  localai-up  Start LocalAI in the background
-  localai-down  Stop the LocalAI
-  localai-restart  Restart LocalAI container
-  localai-exec  Exec into the LocalAI container
-  localai-logs  Get logs from LocalAI container
-  comfyui-up  Start ComfyUI in the background
-  comfyui-down  Stop the ComfyUI stack
-  comfyui-restart  Restart ComfyUI container
-  comfyui-exec  Exec into the ComfyUI container
-  comfyui-logs  Get logs from ComfyUI container
-  openwebui-up  Start Open-WebUI in the background
-  openwebui-down  Stop the Open-WebUI stack
-  openwebui-restart  Restart Open-WebUI container
-  openwebui-exec  Exec into the Open-WebUI container
-  openwebui-logs  Get logs from Open-WebUI container
-  flowise-up  Start Flowise in the background
-  flowise-down  Stop the Flowise stack
-  flowise-restart  Restart Flowise container
-  flowise-exec  Exec into the Flowise container
-  flowise-logs  Get logs from Flowise container
-  postgres-up  Start Postgres in the background
-  postgres-down  Stop the Postgres stack
-  postgres-restart  Restart Postgres container
-  postgres-exec  Exec into the Postgres container
-  postgres-logs  Get logs from Postgres container
-  chroma-up   Start ChromaDB in the background
-  chroma-down  Stop the ChromaDB stack
-  chroma-restart  Restart ChromaDB container
-  chroma-exec  Exec into the ChromaDB container
-  chroma-logs  Get logs from ChromaDB container
-  unstructured-up  Start Unstructured-API in the background
-  unstructured-down  Stop the Unstructured-API stack
-  unstructured-restart  Restart Unstructured-API container
-  unstructured-exec  Exec into the Unstructured-API container
-  unstructured-logs  Get logs from Unstructured-API container
-  all-up      Turns on all stacks
-  all-down    Turns off all stacks
-  help        show this usage
+  ```bash
+  Targets:
+    localai_nvidia-up  Start localai_Nvidia in the background
+    localai_nvidia-down  Stop the localai_Nvidia
+    localai_nvidia-restart  Restart localai_Nvidia container
+    localai_nvidia-exec  Exec into the localai_Nvidia container
+    localai_nvidia-logs  Get logs from localai_Nvidia container
+    localai_amd-up  Start localai_AMD in the background
+    localai_amd-down  Stop the localai_AMD
+    localai_amd-restart  Restart localai_AMD container
+    localai_amd-exec  Exec into the localai_AMD container
+    localai_amd-logs  Get logs from localai_AMD container
+    comfyui-up  Start ComfyUI in the background
+    comfyui-down  Stop the ComfyUI stack
+    comfyui-restart  Restart ComfyUI container
+    comfyui-exec  Exec into the ComfyUI container
+    comfyui-logs  Get logs from ComfyUI container
+    openwebui-up  Start Open-WebUI in the background
+    openwebui-down  Stop the Open-WebUI stack
+    openwebui-restart  Restart Open-WebUI container
+    openwebui-exec  Exec into the Open-WebUI container
+    openwebui-logs  Get logs from Open-WebUI container
+    flowise-up  Start Flowise in the background
+    flowise-down  Stop the Flowise stack
+    flowise-restart  Restart Flowise container
+    flowise-exec  Exec into the Flowise container
+    flowise-logs  Get logs from Flowise container
+    postgres-up  Start Postgres in the background
+    postgres-down  Stop the Postgres stack
+    postgres-restart  Restart Postgres container
+    postgres-exec  Exec into the Postgres container
+    postgres-logs  Get logs from Postgres container
+    chroma-up   Start ChromaDB in the background
+    chroma-down  Stop the ChromaDB stack
+    chroma-restart  Restart ChromaDB container
+    chroma-exec  Exec into the ChromaDB container
+    chroma-logs  Get logs from ChromaDB container
+    unstructured-up  Start Unstructured-API in the background
+    unstructured-down  Stop the Unstructured-API stack
+    unstructured-restart  Restart Unstructured-API container
+    unstructured-exec  Exec into the Unstructured-API container
+    unstructured-logs  Get logs from Unstructured-API container
+    all-up      Turns on all stacks
+    all-down    Turns off all stacks
+    help        show this usage
+  ```
 ```
 
 Application URLs:

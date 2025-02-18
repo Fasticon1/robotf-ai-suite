@@ -2,13 +2,13 @@ version: "3.9"
 
 services:
   localai:
-    container_name: localai
+    container_name: localai_AMD
 
     ## Change to your platform example linux/arm64 or linux/amd64
     platform: linux/amd64
 
     ## Platform runtime
-    runtime: nvidia
+    runtime: runc
 
     ## Look at docs and quay.io registry for images
     ## v2.24.2-aio-cpu
@@ -43,6 +43,10 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
       ## - API_KEYS=""
 
+    devices:
+      - /dev/dri
+      - /dev/kfd
+
     networks:
       - ai_network
 
@@ -50,7 +54,7 @@ services:
       resources:
         reservations:
           devices:
-            - driver: nvidia
+            - driver: amdgpu
               device_ids: ['all']
               capabilities: [gpu]
               
