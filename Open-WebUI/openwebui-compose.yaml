@@ -22,6 +22,10 @@ services:
     environment:
       - PORT=3000
       - OPENAI_API_BASE_URL=http://localai:8080/v1
+      #Us this for AMD
+     #- OPENAI_API_BASE_URL=http://localai:8081/v1
+    
+     
 
     networks:
       - localai_ai_network
