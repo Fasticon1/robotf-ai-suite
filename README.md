@@ -89,7 +89,9 @@ Targets:
 
 Application URLs:
 
-LocalAI `http://<your server ip>:8080`
+LocalAI_Nvidia `http://<your server ip>:8080`
+
+LocalAI_AMD `http://<your server ip>:8181`
 
 ComfyUI `http://<your server ip>:8188`
 

@@ -1,29 +1,56 @@
-## LocalAI Docker Compose Commands
+## LocalAI_Nvidia Docker Compose Commands
 
-localai-up: ## Start LocalAI in the background
-	docker-compose -f ./LocalAI/localai-compose.yaml up -d
+localai_Nvidia-up: ## Start LocalAI_Nvidia in the background
+	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml up -d
 
-.PHONY: localai-up
+.PHONY: localai_Nvidia-up
 
-localai-down: ## Stop the LocalAI
-	docker-compose -f ./LocalAI/localai-compose.yaml down
+localai_Nvidia-down: ## Stop the LocalAI_Nvidia
+	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml down
 
-.PHONY: localai-down
+.PHONY: localai_Nvidia-down
 
-localai-restart: ## Restart LocalAI container
-	docker-compose -f ./LocalAI/localai-compose.yaml restart
+localai_Nvidia-restart: ## Restart LocalAI_Nvidia container
+	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml restart
 
-.PHONY: localai-restart
+.PHONY: localai_Nvidia-restart
 
-localai-exec: ## Exec into the LocalAI container
-	docker exec -it localai /bin/bash
+localai_Nvidia-exec: ## Exec into the LocalAI_Nvidia container
+	docker exec -it localai_Nvidia /bin/bash
 
-.PHONY: localai-exec
+.PHONY: localai_Nvidia-exec
 
-localai-logs: ## Get logs from LocalAI container
-	docker logs localai
+localai_Nvidia-logs: ## Get logs from LocalAI_Nvidia container
+	docker logs localai_Nvidia
 
-.PHONY: localai-logs
+.PHONY: localai_Nvidia-logs
+
+## LocalAI_AMD Docker Compose Commands
+
+localai_AMD-up: ## Start LocalAI_AMD in the background
+	docker-compose -f ./LocalAI_AMD/localai-compose.yaml up -d
+
+.PHONY: localai_AMD-up
+
+localai_AMD-down: ## Stop the LocalAI_AMD
+	docker-compose -f ./LocalAI_AMD/localai-compose.yaml down
+
+.PHONY: localai_AMD-down
+
+localai_AMD-restart: ## Restart LocalAI_AMD container
+	docker-compose -f ./LocalAI_AMD/localai-compose.yaml restart
+
+.PHONY: localai_AMD-restart
+
+localai_AMD-exec: ## Exec into the LocalAI_AMD container
+	docker exec -it localai_AMD /bin/bash
+
+.PHONY: localai_AMD-exec
+
+localai_AMD-logs: ## Get logs from LocalAI_AMD container
+	docker logs localai_AMD
+
+.PHONY: localai_AMD-logs
 
 ## ComfyUI Docker Compose Commands
 
