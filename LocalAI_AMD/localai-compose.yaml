@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   localai:
-    container_name: localai_AMD
+    container_name: localai_amd
 
     ## Change to your platform example linux/arm64 or linux/amd64
     platform: linux/amd64

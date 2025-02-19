@@ -3,12 +3,12 @@
 localai_nvidia-up: ## Start LocalAI_Nvidia in the background
 	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml up -d
 
-.PHONY: localai_Nvidia-up
+.PHONY: localai_nvidia-up
 
 localai_nvidia-down: ## Stop the LocalAI_Nvidia
 	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml down
 
-.PHONY: localai_Nvidia-down
+.PHONY: localai_nvidia-down
 
 localai_nvidia-restart: ## Restart LocalAI_Nvidia container
 	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml restart
@@ -16,14 +16,14 @@ localai_nvidia-restart: ## Restart LocalAI_Nvidia container
 .PHONY: localai_Nvidia-restart
 
 localai_nvidia-exec: ## Exec into the LocalAI_Nvidia container
-	docker exec -it localai_Nvidia /bin/bash
+	docker exec -it localai_nvidia /bin/bash
 
-.PHONY: localai_Nvidia-exec
+.PHONY: localai_nvidia-exec
 
 localai_nvidia-logs: ## Get logs from LocalAI_Nvidia container
-	docker logs localai_Nvidia
+	docker logs localai_nvidia
 
-.PHONY: localai_Nvidia-logs
+.PHONY: localai_nvidia-logs
 
 ## LocalAI_AMD Docker Compose Commands
 
