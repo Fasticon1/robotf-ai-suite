@@ -16,15 +16,15 @@ services:
 
     ## Model Volume mount <local path>:/app/backend/data
     volumes:
-      - ../flowise:/data
+      - FLOWISE_DATA_PATH:/data
 
     ## Environment variables see docs
     environment:
       - PORT=3001
       - CORS_ORIGINS=*
       - IFRAME_ORIGINS=*
-      - FLOWISE_USERNAME=admin
-      - FLOWISE_PASSWORD=password
+      - FLOWISE_USERNAME=FLOWISE_USERNAME
+      - FLOWISE_PASSWORD=FLOWISE_PASSWORD
       - FLOWISE_FILE_SIZE_LIMIT=500mb
       - DEBUG=false
       - DATABASE_TYPE=postgres

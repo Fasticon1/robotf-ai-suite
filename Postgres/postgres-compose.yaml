@@ -6,12 +6,12 @@ services:
     container_name: postgres
     restart: always
     environment:
-      - POSTGRES_DB=flowise
-      - POSTGRES_USER=pguser
-      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=fPOSTGRES_DB
+      - POSTGRES_USER=POSTGRES_USER
+      - POSTGRES_PASSWORD=POSTGRES_PASSWORD
       - PGDATA=/var/lib/postgresql/data
     volumes:
-      - ../pg-data:/var/lib/postgresql/data
+      - POSTGRES_DATA_PATH:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"

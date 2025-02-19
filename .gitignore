@@ -13,3 +13,5 @@ chroma_data
 chroma_data/*
 pg-data
 pg-data/*
+
+.env
