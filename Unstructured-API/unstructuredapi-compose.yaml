@@ -15,7 +15,7 @@ services:
       - 8003:8003
 
     networks:
-      - localai_ai_network
+      - localai_nvidia_ai_network
 
     ## Environment variables see docs
     environment:
@@ -31,5 +31,5 @@ services:
     restart: unless-stopped
 
 networks:
-  localai_ai_network:
+  localai_nvidia_ai_network:
     external: true
