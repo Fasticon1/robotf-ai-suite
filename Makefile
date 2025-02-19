@@ -1,53 +1,53 @@
 ## LocalAI_Nvidia Docker Compose Commands
 
-localai_Nvidia-up: ## Start LocalAI_Nvidia in the background
+localai_nvidia-up: ## Start LocalAI_Nvidia in the background
 	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml up -d
 
 .PHONY: localai_Nvidia-up
 
-localai_Nvidia-down: ## Stop the LocalAI_Nvidia
+localai_nvidia-down: ## Stop the LocalAI_Nvidia
 	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml down
 
 .PHONY: localai_Nvidia-down
 
-localai_Nvidia-restart: ## Restart LocalAI_Nvidia container
+localai_nvidia-restart: ## Restart LocalAI_Nvidia container
 	docker-compose -f ./LocalAI_Nvidia/localai-compose.yaml restart
 
 .PHONY: localai_Nvidia-restart
 
-localai_Nvidia-exec: ## Exec into the LocalAI_Nvidia container
+localai_nvidia-exec: ## Exec into the LocalAI_Nvidia container
 	docker exec -it localai_Nvidia /bin/bash
 
 .PHONY: localai_Nvidia-exec
 
-localai_Nvidia-logs: ## Get logs from LocalAI_Nvidia container
+localai_nvidia-logs: ## Get logs from LocalAI_Nvidia container
 	docker logs localai_Nvidia
 
 .PHONY: localai_Nvidia-logs
 
 ## LocalAI_AMD Docker Compose Commands
 
-localai_AMD-up: ## Start LocalAI_AMD in the background
+localai_amd-up: ## Start LocalAI_AMD in the background
 	docker-compose -f ./LocalAI_AMD/localai-compose.yaml up -d
 
 .PHONY: localai_AMD-up
 
-localai_AMD-down: ## Stop the LocalAI_AMD
+localai_amd-down: ## Stop the LocalAI_AMD
 	docker-compose -f ./LocalAI_AMD/localai-compose.yaml down
 
 .PHONY: localai_AMD-down
 
-localai_AMD-restart: ## Restart LocalAI_AMD container
+localai_amd-restart: ## Restart LocalAI_AMD container
 	docker-compose -f ./LocalAI_AMD/localai-compose.yaml restart
 
 .PHONY: localai_AMD-restart
 
-localai_AMD-exec: ## Exec into the LocalAI_AMD container
+localai_amd-exec: ## Exec into the LocalAI_AMD container
 	docker exec -it localai_AMD /bin/bash
 
 .PHONY: localai_AMD-exec
 
-localai_AMD-logs: ## Get logs from LocalAI_AMD container
+localai_amd-logs: ## Get logs from LocalAI_AMD container
 	docker logs localai_AMD
 
 .PHONY: localai_AMD-logs
