@@ -19,11 +19,11 @@ services:
 
     ## Model Volume mount <local path>:/root/ComfyUI/
     volumes:
-      - ../comfyui_source:/root/ComfyUI/
+      - COMFYUI_DATA_PATH:/root/ComfyUI/
 
     ## Environment variables see docs
     environment:
-      - HOST_MODEL_PATH=/models
+      - COMFYUI_MODELS_PATH=/models
       - NVIDIA_VISIBLE_DEVICES=all
       ## Use for older GPU if having issues
       # - CLI_ARGS="--disable-cuda-malloc"

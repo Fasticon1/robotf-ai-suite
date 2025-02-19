@@ -97,7 +97,7 @@ Application URLs:
 
 LocalAI_Nvidia `http://<your server ip>:8080`
 
-LocalAI_AMD `http://<your server ip>:8181`
+LocalAI_AMD `http://<your server ip>:8081`
 
 ComfyUI `http://<your server ip>:8188`
 
