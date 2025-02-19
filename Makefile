@@ -109,7 +109,7 @@ openwebui-logs: ## Get logs from Open-WebUI container
 
 ## Flowise Docker Compose Commands
 
-flowise-up: localai-up postgres-up ## Start Flowise in the background
+flowise-up: localai_nvidia-up postgres-up ## Start Flowise in the background
 	docker-compose -f ./Flowise/flowise-compose.yaml up -d
 
 .PHONY: flowise-up
@@ -163,7 +163,7 @@ postgres-logs: ## Get logs from Postgres container
 
 ## N8N Docker Compose Commands
 
-n8n-up: localai-up postgres-up ## Start n8n in the background
+n8n-up: localai_nvidia-up postgres-up ## Start n8n in the background
 	docker-compose -f ./n8n/n8n-compose.yaml up -d
 
 .PHONY: n8n-up

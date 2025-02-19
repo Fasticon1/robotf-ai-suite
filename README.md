@@ -156,7 +156,11 @@ To stop it
 make comfyui-down
 ```
 
-**Warning ComfyUI will download several models on it's first startup to support Image Generation See more info at [YanWenKun](https://github.com/YanWenKun/ComfyUI-Docker)
+**Warning ComfyUI will download several models on it'volumes:
+  OPENWEBUI_DATA_PATH:
+driver: local
+  
+s first startup to support Image Generation See more info at [YanWenKun](https://github.com/YanWenKun/ComfyUI-Docker)
 
 Visit `http://<your server ip>:8188` to see the ComfyUI Application
 

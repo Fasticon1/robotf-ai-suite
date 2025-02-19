@@ -23,16 +23,16 @@ services:
       - PORT=3001
       - CORS_ORIGINS=*
       - IFRAME_ORIGINS=*
-      - FLOWISE_USERNAME=FLOWISE_USERNAME
-      - FLOWISE_PASSWORD=FLOWISE_PASSWORD
+      - FLOWISE_USERNAME=test
+      - FLOWISE_PASSWORD=test
       - FLOWISE_FILE_SIZE_LIMIT=500mb
       - DEBUG=false
       - DATABASE_TYPE=postgres
       - DATABASE_PORT=5432
       - DATABASE_HOST=postgres
-      - DATABASE_NAME=POSTGRES_DB
-      - DATABASE_USER=POSTGRES_USER
-      - DATABASE_PASSWORD=POSTGRES_PASSWORD
+      - DATABASE_NAME=${POSTGRES_DB}
+      - DATABASE_USER=${POSTGRES_USER}
+      - DATABASE_PASSWORD=${POSTGRES_PASSWORD}
       - DATABASE_SSL=false
       - DATABASE_PATH=/data
       - BLOB_STORAGE_PATH=/data/uploads
@@ -56,6 +56,10 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
+
+volumes:
+  FLOWISE_DATA_PATH:
+    driver: local
 
 networks:
   localai_nvidia_ai_network:

@@ -38,6 +38,10 @@ services:
     tty: true
     restart: unless-stopped
 
+volumes:
+  N8N_DATA_PATH:
+    driver: local
+
 networks:
   localai_nvidia_ai_network:
     external: true

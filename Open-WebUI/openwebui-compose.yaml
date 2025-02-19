@@ -42,7 +42,7 @@ services:
 volumes:
   OPENWEBUI_DATA_PATH:
     driver: local
-
+  
 networks:
   localai_nvidia_ai_network:
     external: true
