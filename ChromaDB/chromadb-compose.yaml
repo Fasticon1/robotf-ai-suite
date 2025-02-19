@@ -16,7 +16,7 @@ services:
 
     ## Model Volume mount <local path>:/chroma/chroma/
     volumes:
-       - ../chroma_data:/chroma/chroma/
+       - CHROMADB_DATA_PATH:/chroma/chroma/
 
     networks:
       - localai_ai_network

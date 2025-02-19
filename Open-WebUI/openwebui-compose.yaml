@@ -16,13 +16,13 @@ services:
 
     ## Model Volume mount <local path>:/app/backend/data
     volumes:
-      - ../openwebui:/app/backend/data
+      - OPENWEBUI_DATA_PATH:/app/backend/data
 
     ## Environment variables see docs
     environment:
       - PORT=3000
       - OPENAI_API_BASE_URL=http://localai:8080/v1
-      #Us this for AMD
+    # Us this for AMD
      #- OPENAI_API_BASE_URL=http://localai:8081/v1
     
      

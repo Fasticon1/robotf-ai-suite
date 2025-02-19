@@ -38,7 +38,7 @@ services:
       - WATCHDOG_BUSY_TIMEOUT=20m
       - IMAGE_PATH=/models/images/
       - UPLOAD_LIMIT=2000
-      - threads=18
+      - threads=16
       - MODELS_PATH=/models
       - NVIDIA_VISIBLE_DEVICES=all
       ## - API_KEYS=""

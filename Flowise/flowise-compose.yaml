@@ -30,9 +30,9 @@ services:
       - DATABASE_TYPE=postgres
       - DATABASE_PORT=5432
       - DATABASE_HOST=postgres
-      - DATABASE_NAME=flowise
-      - DATABASE_USER=pguser
-      - DATABASE_PASSWORD=mypassword
+      - DATABASE_NAME=POSTGRES_DB
+      - DATABASE_USER=POSTGRES_USER
+      - DATABASE_PASSWORD=POSTGRES_PASSWORD
       - DATABASE_SSL=false
       - DATABASE_PATH=/data
       - BLOB_STORAGE_PATH=/data/uploads
