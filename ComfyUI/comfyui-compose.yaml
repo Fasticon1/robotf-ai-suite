@@ -39,3 +39,7 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
+
+volumes:
+  COMFYUI_DATA_PATH:
+    driver: local
