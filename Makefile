@@ -81,7 +81,7 @@ comfyui-logs: ## Get logs from ComfyUI container
 
 ## Open-WebUI Docker Compose Commands
 
-openwebui-up: localai-up ## Start Open-WebUI in the background
+openwebui-up: localai_nvidia-up ## Start Open-WebUI in the background
 	docker-compose -f ./Open-WebUI/openwebui-compose.yaml up -d
 
 .PHONY: openwebui-up
