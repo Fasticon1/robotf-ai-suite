@@ -19,7 +19,7 @@ services:
 
     ## Model Volume mount <local path>:/root/ComfyUI/
     volumes:
-      - COMFYUI_DATA_PATH:/root/ComfyUI/
+      - ${COMFYUI_DATA_PATH}:/root/ComfyUI/
 
     ## Environment variables see docs
     environment:

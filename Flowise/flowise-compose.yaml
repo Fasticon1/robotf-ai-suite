@@ -16,21 +16,21 @@ services:
 
     ## Model Volume mount <local path>:/app/backend/data
     volumes:
-      - FLOWISE_DATA_PATH:/data
+      - ${FLOWISE_DATA_PATH}:/data
 
     ## Environment variables see docs
     environment:
       - PORT=3001
       - CORS_ORIGINS=*
       - IFRAME_ORIGINS=*
-      - FLOWISE_USERNAME=test
-      - FLOWISE_PASSWORD=test
+      - FLOWISE_USERNAME=${FLOWISE_USERNAME}
+      - FLOWISE_PASSWORD=${FLOWISE_PASSWORD}
       - FLOWISE_FILE_SIZE_LIMIT=500mb
       - DEBUG=false
       - DATABASE_TYPE=postgres
       - DATABASE_PORT=5432
       - DATABASE_HOST=postgres
-      - DATABASE_NAME=${POSTGRES_DB}
+      - DATABASE_NAME=flowise
       - DATABASE_USER=${POSTGRES_USER}
       - DATABASE_PASSWORD=${POSTGRES_PASSWORD}
       - DATABASE_SSL=false
@@ -56,10 +56,6 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
-
-volumes:
-  FLOWISE_DATA_PATH:
-    driver: local
 
 networks:
   localai_nvidia_ai_network:

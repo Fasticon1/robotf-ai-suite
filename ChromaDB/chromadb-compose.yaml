@@ -16,7 +16,7 @@ services:
 
     ## Model Volume mount <local path>:/chroma/chroma/
     volumes:
-       - CHROMADB_DATA_PATH:/chroma/chroma/
+       - ${CHROMADB_DATA_PATH}:/chroma/chroma/
 
     networks:
       - localai_nvidia_ai_network

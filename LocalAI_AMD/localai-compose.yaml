@@ -23,7 +23,7 @@ services:
 
     ## Model Volume mount <local path>:/models
     volumes:
-      - LOCALAI_AMD_MODELS_PATH:/models
+      - /var/localai_nvidia:/models
 
     ## Environment variables see docs
     environment:

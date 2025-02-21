@@ -23,7 +23,7 @@ services:
 
     ## Model Volume mount <local path>:/models
     volumes:
-      - LOCALAI_NVIDIA_MODELS_PATH:/models
+      - ${LOCALAI_NVIDIA_MODELS_PATH}:/models
 
     ## Environment variables see docs
     environment:
@@ -61,7 +61,3 @@ services:
 networks:
   ai_network:
     driver: bridge
-
-volumes:
-  LOCALAI_NVIDIA_MODELS_PATH:
-    driver: local

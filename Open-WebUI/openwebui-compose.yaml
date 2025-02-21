@@ -16,7 +16,7 @@ services:
 
     ## Model Volume mount <local path>:/app/backend/data
     volumes:
-      - OPENWEBUI_DATA_PATH:/app/backend/data
+      - ${OPENWEBUI_DATA_PATH}:/app/backend/data
 
     ## Environment variables see docs
     environment:
@@ -38,11 +38,7 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
-
-volumes:
-  OPENWEBUI_DATA_PATH:
-    driver: local
-  
+ 
 networks:
   localai_nvidia_ai_network:
     external: true

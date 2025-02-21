@@ -190,7 +190,7 @@ n8n-logs: ## Get logs from n8n container
 
 ## Chroma Docker Compose Commands
 
-chroma-up: localai-up ## Start ChromaDB in the background
+chroma-up: localai_nvidia-up ## Start ChromaDB in the background
 	docker-compose -f ./ChromaDB/chromadb-compose.yaml up -d
 
 .PHONY: chroma-up
@@ -217,7 +217,7 @@ chroma-logs: ## Get logs from ChromaDB container
 
 ## Unstructured API Docker Compose Commands
 
-unstructured-up: localai-up ## Start Unstructured-API in the background
+unstructured-up: localai_nvidia-up ## Start Unstructured-API in the background
 	docker-compose -f ./Unstructured-API/unstructuredapi-compose.yaml up -d
 
 .PHONY: unstructured-up
@@ -242,7 +242,7 @@ unstructured-logs: ## Get logs from Unstructured-API container
 
 .PHONY: unstructured-logs
 
-all-up: localai-up postgres-up chroma-up unstructured-up flowise-up n8n-up openwebui-up comfyui-up ## Turns on all stacks
+all-up: localai_nvidia-up postgres-up chroma-up unstructured-up flowise-up n8n-up openwebui-up comfyui-up ## Turns on all stacks
 
 .PHONY: all-up
 
