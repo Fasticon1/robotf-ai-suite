@@ -246,7 +246,7 @@ all-up: localai_nvidia-up postgres-up chroma-up unstructured-up flowise-up n8n-u
 
 .PHONY: all-up
 
-all-down: flowise-down n8n-down openwebui-down comfyui-down unstructured-down chroma-down postgres-down localai-down ## Turns off all stacks
+all-down: flowise-down n8n-down openwebui-down comfyui-down unstructured-down chroma-down postgres-down localai_nvidia-down ## Turns off all stacks
 
 .PHONY: all-down
 
