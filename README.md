@@ -114,6 +114,10 @@ ChromaDB on `<your-server-ip>:8000`
 
 Unstructured API on `<your-server-ip>:8003`
 
+Ollama_ROCm on `<your-server-ip>:11436`
+
+Jupyter Lab on `<your-server-ip>:8888
+
 ### Ubuntu Server 24.04 Bootstrap Guide
 
 See the guide on setting up a fresh Ubuntu server 24.04 with all Nvidia drivers, cuda, toolkit, etc, etc at [Bootstrap Guide](/Ubuntu-bootstrap/Bootstrap.md)

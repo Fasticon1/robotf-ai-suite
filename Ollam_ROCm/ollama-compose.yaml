@@ -1,0 +1,31 @@
+services:
+
+  ollama:
+    image: ollama/ollama:rocm
+    container_name: ollama
+    environment:
+      OLLAMA_MODELS: ${OLLAMA_ROCM_DATA_PATH}
+      HSA_OVERRIDE_GFX_VERSION: "10.3.0"
+      HIP_VISIBLE_DEVICES: "0,1"
+    devices:
+      - "/dev/kfd"
+      - "/dev/dri"
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    ipc: host
+    group_add:
+      - video
+    volumes:
+      - /home/username/.ollama:/root/.ollama
+      - /home/username/ollama/models:/usr/share/ollama
+    ports:
+      - "11436:11436"
+    networks:
+      - localai_nvidia_ai_network
+
+  
+networks:
+  localai_nvidia_ai_network:
+    external: true
