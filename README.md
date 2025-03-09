@@ -52,11 +52,6 @@ Usage:
     localai_nvidia-restart  Restart localai_Nvidia container
     localai_nvidia-exec  Exec into the localai_Nvidia container
     localai_nvidia-logs  Get logs from localai_Nvidia container
-    localai_amd-up  Start localai_AMD in the background
-    localai_amd-down  Stop the localai_AMD
-    localai_amd-restart  Restart localai_AMD container
-    localai_amd-exec  Exec into the localai_AMD container
-    localai_amd-logs  Get logs from localai_AMD container
     comfyui-up  Start ComfyUI in the background
     comfyui-down  Stop the ComfyUI stack
     comfyui-restart  Restart ComfyUI container
@@ -97,8 +92,6 @@ Application URLs:
 
 LocalAI_Nvidia `http://<your server ip>:8080`
 
-LocalAI_AMD `http://<your server ip>:8081`
-
 ComfyUI `http://<your server ip>:8188`
 
 Open WebUI `http://<your server ip>:3000`
@@ -106,7 +99,6 @@ Open WebUI `http://<your server ip>:3000`
 Flowise `http://<your server ip>:3001`
 
 n8n `http://<your server ip>:5678`
-
 
 Postgres on `<your-server-ip>:5432`
 
@@ -116,7 +108,7 @@ Unstructured API on `<your-server-ip>:8003`
 
 Ollama_ROCm on `<your-server-ip>:11436`
 
-Jupyter Lab on `<your-server-ip>:8888
+Jupyter-Lab on `<your-server-ip>:8888
 
 ### Ubuntu Server 24.04 Bootstrap Guide
 

@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  jupyterlab:
+    image: jupyter/datascience-notebook:latest
+    container_name: jupyterlab
+    restart: unless-stopped
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0,1
+      - JUPYTER_ENABLE_LAB=yes
+    deploy:
+      resources:
+        limits:
+          cpus: "8.0"
+          memory: "32GB"
+    volumes:
+      - ${JUPYTER_DATA_DIR}:/home/jovyan/work
+    ports:
+      - "8888:8888"
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+    networks:
+      - localai_nvidia_ai_network
+
+    runtime: nvidia
+
+networks:
+  localai_nvidia_ai_network:
+    external: true
