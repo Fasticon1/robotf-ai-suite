@@ -25,6 +25,33 @@ localai_nvidia-logs: ## Get logs from LocalAI_Nvidia container
 
 .PHONY: localai_nvidia-logs
 
+## LocalAI_AMD Docker Compose Commands
+
+localai_amd-up: ## Start LocalAI_AMD in the background
+	docker-compose -f ./LocalAI_AMD/localai-compose.yaml up -d
+
+.PHONY: localai_AMD-up
+
+localai_amd-down: ## Stop the LocalAI_AMD
+	docker-compose -f ./LocalAI_AMD/localai-compose.yaml down
+
+.PHONY: localai_AMD-down
+
+localai_amd-restart: ## Restart LocalAI_AMD container
+	docker-compose -f ./LocalAI_AMD/localai-compose.yaml restart
+
+.PHONY: localai_AMD-restart
+
+localai_amd-exec: ## Exec into the LocalAI_AMD container
+	docker exec -it localai_AMD /bin/bash
+
+.PHONY: localai_AMD-exec
+
+localai_amd-logs: ## Get logs from LocalAI_AMD container
+	docker logs localai_AMD
+
+.PHONY: localai_AMD-logs
+
 ## ComfyUI Docker Compose Commands
 
 comfyui-up: ## Start ComfyUI in the background
@@ -215,14 +242,7 @@ unstructured-logs: ## Get logs from Unstructured-API container
 
 .PHONY: unstructured-logs
 
-## Ollama_ROCm Docker Compose Commands
-
-ollama-up:
-	docker-compose -f ./Ollam_ROCm/ollama-compose.yaml
-
-.PHONY: ollama-up
-
-all-up: localai_nvidia-up postgres-up chroma-up unstructured-up flowise-up n8n-up openwebui-up comfyui-up ollama-up## Turns on all stacks
+all-up: localai_nvidia-up postgres-up chroma-up unstructured-up flowise-up n8n-up openwebui-up comfyui-up ## Turns on all stacks
 
 .PHONY: all-up
 

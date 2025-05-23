@@ -1,1 +1,2 @@
 CREATE DATABASE n8n;
+CREATE DATABASE transcribe;
